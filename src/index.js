@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 
 app.get("/api/hello", async (req, res) => {
-  const visitorName = req.query.visitor_name || "Visitor";
+  const visitorName = req.query.visitor_name;
   const clientIp =
     req.headers["x-forwarded-for"] || req.connection.remoteAddress;
 
